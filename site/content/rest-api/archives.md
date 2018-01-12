@@ -216,6 +216,10 @@ curl "https://api.livechatinc.com/chats?\
 
 Returns all ended chats.
 
+When calling our **/chats** endpoint, **the response is limited** to the latest 100000 records on your LiveChat license, which gives you exactly 4000 pages with 25 chats per page. If you have more than 100000 chats on your license and you want to get them all, you will have to call our API several times.
+
+In the first call, use the data range that covers the first 100000 chats. When making other calls, use the data range that includes the rest of your conversations.
+
 #### Optional parameters
 
 | Parameter | Description |
